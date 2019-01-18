@@ -18,7 +18,7 @@ class App:
         self.root = root
         self.root.title(window_title)
 
-        self.button_one = ttk.Button(self.root, text="I have thing to do", command=self.do_the_thing)
+        self.button_one = ttk.Button(self.root)
         self.button_two = ttk.Button(self.root, text="I have not yet done the thing",
                                      command=self.fail)
         self.status = ttk.Label(self.root)
@@ -26,6 +26,8 @@ class App:
 
         for item in (self.status, self.image, self.button_one):
             item.pack()
+
+        self.do_the_thing()
 
         self.root.mainloop()
 
