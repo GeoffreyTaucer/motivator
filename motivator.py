@@ -35,6 +35,8 @@ class App:
     def do_the_thing(self):
         img = ImageTk.PhotoImage(file="dothething.gif")
         self.image.configure(image=img)
+        self.image.image = img
+        self.root.update_idletasks()
 
         self.status.configure(text="")
 
@@ -45,6 +47,8 @@ class App:
     def did_the_thing(self):
         img = ImageTk.PhotoImage(file="reward.gif")
         self.image.configure(image=img)
+        self.image.image = img
+        self.root.update_idletasks()
 
         self.button_two.forget()
 
