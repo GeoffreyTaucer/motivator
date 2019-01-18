@@ -2,14 +2,15 @@ import tkinter
 from tkinter import ttk
 from playsound import playsound
 from PIL import ImageTk
+from threading import Thread
 
 
 def play_sound(victory):
     if victory:
-        playsound("victory.mp3")
+        Thread(target=playsound, args=("victory.mp3",)).start()
 
     else:
-        playsound("sadtrombone.mp3")
+        Thread(target=playsound, args=("sadtrombone.mp3",)).start()
 
 
 class App:
