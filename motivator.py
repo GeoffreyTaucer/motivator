@@ -13,8 +13,8 @@ def resource_path(relative_path):
 
 
 class App:
-    def __init__(self, root, window_title):
-        self.root = root
+    def __init__(self, window, window_title):
+        self.root = window
         self.root.title(window_title)
 
         self.images = {"dothething": ImageTk.PhotoImage(file=resource_path("dothething.gif")),
