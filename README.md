@@ -1,2 +1,2 @@
 # motivator
-Program for motivation, made for shits and giggles
+Program for motivation, made on a whim for tkinter practice
